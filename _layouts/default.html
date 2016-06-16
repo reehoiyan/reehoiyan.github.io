@@ -13,7 +13,11 @@
 			</nav>
 			<div class="container">
 			
-			{{ content }}
+				<p class="meta">{{ page.date | date_to_string }}</p>
+
+				<div class="post">
+					{{ content }}
+				</div>
 			
 			</div>
 			<footer>

@@ -1,7 +1,37 @@
 ---
 layout: default
-title: Hello
 ---
-<div class="blurb">
-	<h1>Hi</h1>
+
+<div class="home">
+
+  <!-- <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+ -->
+  <div class='row'>
+    <div class='sqrt'></div>
+  </div>
+  <div class='row'>
+    <div class='sqrt'>
+      <div class='theme'><div class='text'><a href='/about'>about</a></div></div>
+    </div>
+    <div class='sqrt'>
+      <div class='theme'><div class='text'>Projects</div></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='sqrt'>
+      <div class='theme'><div class='text'>blog</div></div>
+    </div>
+  </div>
 </div>

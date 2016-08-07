@@ -15,3 +15,6 @@ github_username: reehoiyan
 
 # Build settings
 markdown: kramdown
+ 
+collections: 
+ projects: 

@@ -1,20 +1,25 @@
-window.onload = function(){
-  
- 	var img = document.getElementsByTagName('img'),
- 		count = 0;
+function Project() {
+	if(!(this instanceof Project)){
+		return new Project();
+	}
+}
+Project.prototype.init = function(){
+	var img = document.getElementsByTagName('img'),
+ 		count = 0,
+ 		that = p;
  		for(var j = 0; j < img.length; j++){
  			img[j].onload = function(){
- 				count++;
- 				start(count, img.length);
+ 				if(j === img.length){
+ 					return that.start();
+ 				}
  			}
  			img[j].src = img[j].getAttribute('data-src');
  			img[j].style.opacity = 0;
  		}
 }
-function start(count, max){
-
-	if(count !== max) return false;
-	var right = document.getElementsByClassName('right');
+Project.prototype.start = function(){
+	var right = document.getElementsByClassName('right'),
+		that = this;
 
 	for(var r =0; r<right.length; r++){
 		var div = right[r].getElementsByTagName('div')[0],
@@ -22,17 +27,16 @@ function start(count, max){
 	  		img = document.getElementsByTagName('img');
 
 	  	    for(var i = 0; i < img.length; i++){
-	  	    	fadeIn(img[i]);
+	  	    	that.fadeIn(img[i]);
 	  	    }
 
-	  	    fadeIn(h2);
-	  	    fadeIn(div);
+	  	    that.fadeIn(h2);
+	  	    that.fadeIn(div);
 	  	    h2.innerHTML = h2.getAttribute('data-title');
 			div.innerHTML = div.getAttribute('data-content');
   	}
 }
-
-function fadeIn(el){
+Project.prototype.fadeIn = function(el){
 	el.style.opacity = 0;
   	(function fade() {
   	   var val = parseFloat(el.style.opacity);
@@ -42,3 +46,6 @@ function fadeIn(el){
 	  	}
   	})();
 }
+
+let p = new Project();
+window.onload = p.init;

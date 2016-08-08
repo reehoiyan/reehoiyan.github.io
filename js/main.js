@@ -8,10 +8,11 @@ window.onload = function(){
  				start(count, img.length);
  			}
  			img[j].src = img[j].getAttribute('data-src');
+ 			img[j].style.opacity = 0;
  		}
 }
 function start(count, max){
-	
+
 	if(count !== max) return false;
 	var right = document.getElementsByClassName('right');
 

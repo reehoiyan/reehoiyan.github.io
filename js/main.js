@@ -47,5 +47,5 @@ Project.prototype.fadeIn = function(el){
   	})();
 }
 
-let p = new Project();
+var p = new Project();
 window.onload = p.init;

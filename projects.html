@@ -8,17 +8,16 @@ layout: default
             <div class="works">
                 <div class="img_gp">
                     {% for img in projects.image_path %}
-                        <img src='{{img}}'/>
+                        <img data-src='{{img}}'/>
                     {% endfor %}
                 </div>
             </div>
-            <div class="mobile"><img src='{{projects.mobile}}'/></div>
+            <div class="mobile"><img data-src='{{projects.mobile}}'/></div>
         </div>
-        <div class="right"><h2>{{ projects.title }}</h2>{{ projects.content }}</div>
-        <!-- <div class="img_area">
-        	<
+        <div class="right">
+            <h2 data-title="{{ projects.title }}"></h2>
+            <div data-content="{{ projects.content }}"></div>
         </div>
-        <div class="details">{{ projects.content }}</div> -->
     </section>
   </div>
 {% endfor %}

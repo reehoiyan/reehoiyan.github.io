@@ -319,7 +319,7 @@ h2{
 }
 .right div:empty{
     width: 90%;
-    box-shadow: 0 50px #ccc, 0 100px #ccc;
+    box-shadow: 0 50px #E2E2E2, 0 100px #EFEFEF;
 }
 @media only screen and (min-width: 698px) {
     .site-header{

@@ -9,15 +9,15 @@ Project.prototype.init = function(){
  		that = p;
  		for(var j = 0; j < img.length; j++){
  			img[j].onload = function(){
- 				if(j === img.length){
- 					return that.start();
- 				}
+ 				count++;
+ 				that.start(count, img.length);
  			}
  			img[j].src = img[j].getAttribute('data-src');
  			img[j].style.opacity = 0;
  		}
 }
-Project.prototype.start = function(){
+Project.prototype.start = function(count, max){
+	if(count !== max) return false;
 	var right = document.getElementsByClassName('right'),
 		that = this;
 

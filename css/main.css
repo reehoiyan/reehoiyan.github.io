@@ -179,7 +179,7 @@ h2{
     position: absolute;
     top: 20px;
     left: 70px;
-    width: 25px;
+    width: 26px;
     height: 49px;
     background: rgb(51,49,49);
     -webkit-clip-path: polygon(0 0, 80% 100%, 80% 0%);

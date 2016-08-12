@@ -35,4 +35,18 @@ layout: default
       </div>
     </div>
   </div>
+
+  <svg class="clip-svg">
+      <defs>
+        <clipPath id="clipPoly" clipPathUnits="objectBoundingBox">
+            <polygon points="0.5 0, 1 0.5, 0.5 1, 0 0.5" />
+        </clipPath>
+      </defs>  
+  </svg>
+
 </div>
+<style>
+  .sqrt{
+    clip-path: url(#clipPoly);
+  }
+</style>

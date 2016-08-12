@@ -18,3 +18,25 @@ layout: default
   </div>
 
 </article>
+<svg class="clip-svg">
+      <defs>
+        <clipPath id="clipBefore" clipPathUnits="objectBoundingBox">
+            <polygon points="0 0, 0 0.5, 1 0" />
+        </clipPath>
+      </defs>  
+  </svg>
+  <svg class="clip-svg">
+      <defs>
+        <clipPath id="clipAfter" clipPathUnits="objectBoundingBox">
+            <polygon points="0 0, 0.8 1, 0.8 0" />
+        </clipPath>
+      </defs>  
+  </svg>
+  <style>
+    .hair:before{
+      clip-path: url(#clipBefore);
+    }
+    .hair:after{
+      clip-path: url(#clipAfter);
+    }
+  </style>
